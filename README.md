@@ -1,1 +1,1 @@
-# ztwj-sdk-java
+# ztwj-iot-java-sdk
