@@ -28,7 +28,37 @@ public class SendSMSRequestTest extends DefaultClientTest {
 
     @Test
     public void sendSMS() throws Exception {
+        int i = 0;
+        while (i < 20) {
+            try {
+
+                SendSmsRequest request = new SendSmsRequest();
+                request.setReqId(System.currentTimeMillis() + "");
+                request.setVersion("1.0");
+                request.setCardId("89860619050025536672");
+                request.setContents("测试单号码发送短信，请忽略，这是2019年7月23日第【 " +i+ " 】条");
+                SendSmsResponse response = client.execute(request);
+
+                TestCase.assertNotNull("response is null", response);
+                TestCase.assertNotNull("code is null", response.getCode());
+                TestCase.assertNotNull("message is null", response.getMessage());
+
+                System.out.println(JSON.toJSONString(response));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            i++;
+        }
+    }
+
+    @Test
+    public void sendSMSBulk() throws Exception {
         SendSmsRequest request = new SendSmsRequest();
+        request.setReqId(System.currentTimeMillis() + "");
+        request.setVersion("1.0");
+        request.setCardId("111,222,333,444");
+        request.setContents("测试批量发送短信，请忽略。");
         SendSmsResponse response = client.execute(request);
 
         TestCase.assertNotNull("response is null", response);

@@ -10,13 +10,13 @@ import com.ztwj.responses.BaseResponse;
  * @date : 2019/5/22 15:37
  */
 public class GetCardAuthInfoResponse extends BaseResponse {
-    private GetCardAuthInfoData data;
-
-    public GetCardAuthInfoData getData() {
-        return data;
-    }
-
-    public void setData(GetCardAuthInfoData data) {
-        this.data = data;
-    }
+//    private GetCardAuthInfoData data;
+//
+//    public GetCardAuthInfoData getData() {
+//        return data;
+//    }
+//
+//    public void setData(GetCardAuthInfoData data) {
+//        this.data = data;
+//    }
 }
