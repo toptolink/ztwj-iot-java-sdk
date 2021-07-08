@@ -4,6 +4,10 @@ import com.ztwj.requests.flowpool.*;
 import com.ztwj.requests.handle.*;
 import com.ztwj.requests.query.*;
 import com.ztwj.requests.shrepool.*;
+import com.ztwj.requests.whitelist.AddWhitelistContactRequest;
+import com.ztwj.requests.whitelist.DeleteWhitelistContactRequest;
+import com.ztwj.requests.whitelist.GetWhitelistContactRequest;
+import com.ztwj.requests.whitelist.GetWhitelistOperateRecordRequest;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,6 +40,7 @@ public final class UriRegister {
         uriMap.put(GetPackageRechargeListRequest.class.getName(), "/package/getRechargeList");
         uriMap.put(GetSmsDetailsRequest.class.getName(), "/sms/getDetails");
         uriMap.put(GetSmsHistoryInfoRequest.class.getName(), "/sms/getSmsHistoryInfo");
+        uriMap.put(GetSingleCardNumberRequest.class.getName(), "/card/getSingleCardNumber");
 
         /** 办理类接口 */
         uriMap.put(ActivePackageRequest.class.getName(), "/package/active");
@@ -54,6 +59,12 @@ public final class UriRegister {
         /** 共享池接口 */
         uriMap.put(QueryFlowPoolInfoRequest.class.getName(), "/cardPool/queryFlowPoolInfo");
         uriMap.put(QuerySharedPoolListRequest.class.getName(), "/cardPool/toQuerySharedPoolList");
+
+        /** 白名单接口 */
+        uriMap.put(GetWhitelistContactRequest.class.getName(), "/whitelist/getWhitelistContact");
+        uriMap.put(AddWhitelistContactRequest.class.getName(), "/whitelist/addWhitelistContact");
+        uriMap.put(DeleteWhitelistContactRequest.class.getName(), "/whitelist/deleteWhitelistContact");
+        uriMap.put(GetWhitelistOperateRecordRequest.class.getName(), "/whitelist/getWhitelistOperateRecord");
     }
 
     public static String getUri(String className) {

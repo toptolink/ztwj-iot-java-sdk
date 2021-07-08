@@ -3,6 +3,8 @@ package com.ztwj.responses.query;
 import com.ztwj.data.GetCardDetailsData;
 import com.ztwj.responses.BaseResponse;
 
+import java.util.List;
+
 /**
  * 卡片本月用量查询
  *

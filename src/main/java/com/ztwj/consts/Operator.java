@@ -19,4 +19,8 @@ public final class Operator {
      * 电信
      */
     public final static String TELECOM = "3";
+    /**
+     * 国际
+     */
+    public final static String INTERNATIONAL = "4";
 }

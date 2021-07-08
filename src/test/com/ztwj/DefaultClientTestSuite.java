@@ -5,8 +5,15 @@ import com.ztwj.flowpool.QueryPoolFlowRequestTest;
 import com.ztwj.flowpool.UpdateFlowDataByControlTypeRequestTest;
 import com.ztwj.handle.*;
 import com.ztwj.query.*;
+import com.ztwj.requests.query.GetSingleCardNumberRequest;
+import com.ztwj.requests.whitelist.AddWhitelistContactRequest;
+import com.ztwj.requests.whitelist.DeleteWhitelistContactRequest;
 import com.ztwj.shrepool.QueryFlowPoolInfoRequestTest;
 import com.ztwj.shrepool.QuerySharedPoolListRequestTest;
+import com.ztwj.whitelist.AddWhitelistContactRequestTest;
+import com.ztwj.whitelist.DeleteWhitelistContactRequestTest;
+import com.ztwj.whitelist.GetWhitelistContactRequestTest;
+import com.ztwj.whitelist.GetWhitelistOperateRecordRequestTest;
 import junit.framework.JUnit4TestAdapter;
 import junit.framework.TestSuite;
 import org.junit.Test;
@@ -50,11 +57,18 @@ public class DefaultClientTestSuite {
         suite.addTest(new JUnit4TestAdapter(GetPackageRechargeListRequestTest.class));
         suite.addTest(new JUnit4TestAdapter(GetSMSDetailsRequestTest.class));
         suite.addTest(new JUnit4TestAdapter(GetSMSHistoryInfoRequestTest.class));
+        suite.addTest(new JUnit4TestAdapter(GetSingleCardNumberRequestTest.class));
+
 
         /** sharepool */
         suite.addTest(new JUnit4TestAdapter(QueryFlowPoolInfoRequestTest.class));
         suite.addTest(new JUnit4TestAdapter(QuerySharedPoolListRequestTest.class));
 
+        /** whitelist */
+        suite.addTest(new JUnit4TestAdapter(AddWhitelistContactRequestTest.class));
+        suite.addTest(new JUnit4TestAdapter(DeleteWhitelistContactRequestTest.class));
+        suite.addTest(new JUnit4TestAdapter(GetWhitelistContactRequestTest.class));
+        suite.addTest(new JUnit4TestAdapter(GetWhitelistOperateRecordRequestTest.class));
         return suite;
     }
 }
