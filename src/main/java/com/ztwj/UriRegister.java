@@ -2,6 +2,7 @@ package com.ztwj;
 
 import com.ztwj.requests.flowpool.*;
 import com.ztwj.requests.handle.*;
+import com.ztwj.requests.poolop.*;
 import com.ztwj.requests.query.*;
 import com.ztwj.requests.shrepool.*;
 import com.ztwj.requests.whitelist.AddWhitelistContactRequest;
@@ -15,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 资源注册
  *
- * @author LIUSF
+ * @author toptolink.com
  * @date 2019-03-27 18:32:06
  */
 public final class UriRegister {
@@ -65,6 +66,14 @@ public final class UriRegister {
         uriMap.put(AddWhitelistContactRequest.class.getName(), "/whitelist/addWhitelistContact");
         uriMap.put(DeleteWhitelistContactRequest.class.getName(), "/whitelist/deleteWhitelistContact");
         uriMap.put(GetWhitelistOperateRecordRequest.class.getName(), "/whitelist/getWhitelistOperateRecord");
+
+        /** 共享池运营接口 */
+        uriMap.put(PoolopOrderRequest.class.getName(), "/card/order");
+        uriMap.put(PoolopQueryCardDetailsRequest.class.getName(), "/card/queryCardDetails");
+        uriMap.put(PoolopQueryCardMainPkgExpiredTimeRequest.class.getName(), "/card/queryCardMainPkgExpiredTime");
+        uriMap.put(PoolopQueryCardOrderRechargesRequest.class.getName(), "/card/queryCardOrderRecharges");
+        uriMap.put(PoolopQueryPackagesRequest.class.getName(), "/package/queryPackages");
+
     }
 
     public static String getUri(String className) {

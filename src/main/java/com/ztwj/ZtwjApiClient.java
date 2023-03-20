@@ -5,7 +5,7 @@ import com.ztwj.requests.BaseRequest;
 import com.ztwj.responses.BaseResponse;
 
 /**
- * @author LIUSF
+ * @author toptolink.com
  * @date 2019-03-27 18:32:06
  */
 public interface ZtwjApiClient {

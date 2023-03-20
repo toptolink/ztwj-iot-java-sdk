@@ -15,9 +15,9 @@ import org.junit.Test;
  * @author : fire
  * @date : 2019/5/17 18:32
  */
-public abstract class DefaultClientTest {
-    protected ZtwjApiClient client = new DefaultClient(
-            "https://api.toptolink.com/api",
-            "11130",
-            "584f39238ef44bf8b19a862ff7fc5b09");
+public class DefaultClientTest {
+    protected static ZtwjApiClient client = new DefaultClient(
+            DefaultParams.URL,
+            DefaultParams.APPKEY,
+            DefaultParams.SECRET);
 }

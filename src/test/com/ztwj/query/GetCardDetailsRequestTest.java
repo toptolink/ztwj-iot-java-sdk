@@ -31,6 +31,7 @@ public class GetCardDetailsRequestTest extends DefaultClientTest {
     @Test
     public void getCardDetails() throws Exception {
         GetCardDetailsRequest req = new GetCardDetailsRequest();
+        req.setCardId("1440233722917");
         GetCardDetailsResponse response = client.execute(req);
 
         TestCase.assertNotNull("response is null", response);
