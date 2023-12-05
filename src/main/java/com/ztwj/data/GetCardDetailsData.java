@@ -37,6 +37,14 @@ public class GetCardDetailsData {
      */
     private String remainingData;
 
+    private String surplusData;
+
+
+    /**
+     * 是否无限流量：0.否1. 是
+     */
+    private String useDataType;
+
     /**
      * 历史已使用总流量（单位：M）（注：不包含本月）
      */
@@ -239,5 +247,21 @@ public class GetCardDetailsData {
 
     public void setPriceName(String priceName) {
         this.priceName = priceName;
+    }
+
+    public String getSurplusData() {
+        return surplusData;
+    }
+
+    public void setSurplusData(String surplusData) {
+        this.surplusData = surplusData;
+    }
+
+    public String getUseDataType() {
+        return useDataType;
+    }
+
+    public void setUseDataType(String useDataType) {
+        this.useDataType = useDataType;
     }
 }

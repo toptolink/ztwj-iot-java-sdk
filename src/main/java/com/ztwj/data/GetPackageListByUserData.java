@@ -63,6 +63,12 @@ public class GetPackageListByUserData {
     private String voicePackageType;
 
 
+    /**
+     * 价格组
+     */
+    private String priceName;
+
+
     public String getPackageCode() {
         return packageCode;
     }
@@ -149,5 +155,13 @@ public class GetPackageListByUserData {
 
     public void setVoicePackageType(String voicePackageType) {
         this.voicePackageType = voicePackageType;
+    }
+
+    public String getPriceName() {
+        return priceName;
+    }
+
+    public void setPriceName(String priceName) {
+        this.priceName = priceName;
     }
 }
