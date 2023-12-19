@@ -11,8 +11,8 @@ import java.util.List;
  */
 public final class DefaultParams {
     // support TEST or IDC
-    public static final String ENV_NAME = "TEST";
-    // public static final String ENV_NAME = "IDC";
+//    public static final String ENV_NAME = "TEST";
+     public static final String ENV_NAME = "IDC";
 
     // params
     private static final String url;
@@ -28,8 +28,8 @@ public final class DefaultParams {
     static {
         if (ENV_NAME.equals("TEST")) { // TEST
             url = "http://api.toptolink.cn/api";
-            appKey = "40516350";
-            secret = "36bf39e7da6f454cb0d92f04bbf034c0";
+            appKey = "42396859";
+            secret = "b2a4a994a89a4872b26b48fec6223825";
 
             iccid = "89860442192070068079";
             msisdn= "";

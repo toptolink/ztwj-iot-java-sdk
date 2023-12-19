@@ -42,6 +42,7 @@ public final class UriRegister {
         uriMap.put(GetSmsDetailsRequest.class.getName(), "/sms/getDetails");
         uriMap.put(GetSmsHistoryInfoRequest.class.getName(), "/sms/getSmsHistoryInfo");
         uriMap.put(GetSingleCardNumberRequest.class.getName(), "/card/getSingleCardNumber");
+        uriMap.put(GetUserInfoByUserRequest.class.getName(), "/user/queryUserInfo");
 
         /** 办理类接口 */
         uriMap.put(ActivePackageRequest.class.getName(), "/package/active");
